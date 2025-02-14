@@ -1,6 +1,6 @@
 # Algoritmo Genético para o Knapsack Problem
 
-Este repositório contém a implementação de um **algoritmo genético** para resolver o **Knapsack Problem**. O **Knapsack Problem** é um problema clássico de otimização combinatória, onde o objetivo é maximizar o valor dos itens incluídos numa mochila sem exceder a sua capacidade.
+Este repositório contém a implementação de um **algoritmo genético** para resolver o **Knapsack Problem**. O **Knapsack Problem** é um problema clássico de otimização combinatória, cujo objetivo é maximizar o valor dos itens incluídos numa mochila sem exceder a sua capacidade.
 
 ## Descrição do Algoritmo
 
@@ -55,7 +55,7 @@ Este código implementa as operações de:
 
 2. **Instale as dependências necessárias**:
 
-   Se você ainda não tiver o `matplotlib`, instale-o:
+   Se ainda não tiver o `matplotlib`, instale-o:
 
    ```bash
    pip install matplotlib
@@ -72,7 +72,7 @@ Este código implementa as operações de:
 ## Exemplo de Saída
 
 ```bash
-Melhor solução encontrada: [1, 1, 1, 0, 0, 1, 0, 1, 1, 0] com valor total de 1800
+Melhor solução encontrada: [1, 1, 1, 0, 0, 1, 0, 1, 1, 0] com valor total de 180
 ```
 
 Este resultado indica quais foram os itens selecionados para a mochila (onde 1 significa que o item foi escolhido e 0 significa que não foi escolhido) e o valor total obtido.
