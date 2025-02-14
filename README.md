@@ -1,24 +1,34 @@
 # Algoritmo Genético para o Knapsack Problem
 
-Este repositório contém a implementação de um **algoritmo genético** para resolver o **knapsack problem**. O Knapsack Problem é um problema clássico de otimização combinatória, onde o objetivo é maximizar o valor de itens incluídos numa mochila sem exceder a sua capacidade.
+Este repositório contém a implementação de um **algoritmo genético** para resolver o **Knapsack Problem**. O **Knapsack Problem** é um problema clássico de otimização combinatória, onde o objetivo é maximizar o valor dos itens incluídos numa mochila sem exceder a sua capacidade.
 
 ## Descrição do Algoritmo
 
-O algoritmo genético é um método de busca estocástica que simula o processo de seleção natural. Ele utiliza operações de **seleção**, **crossover** (recombinação), **mutação** e **elitismo** para gerar uma população de soluções e evoluí-las ao longo de várias gerações.
+O algoritmo genético é um método de busca estocástica que simula o processo de **seleção natural**. Ele utiliza operações de **seleção**, **crossover** (recombinação), **mutação** e **elitismo** para gerar uma população de soluções e evoluí-las ao longo de várias gerações.
 
 Este código implementa as operações de:
-- **Seleção**: Escolha dos melhores indivíduos da população baseada no valor do **fitness**.
+
+- **Seleção**: Escolha dos melhores indivíduos da população baseada no valor do fitness.
 - **Crossover**: Combinação de duas soluções para gerar novas soluções.
 - **Mutação**: Introdução de pequenas mudanças aleatórias para explorar novas soluções.
-- **Elitismo**: Garantia de que as melhores soluções de uma geração são mantidas.
+- **Elitismo**: Garantia de que as melhores soluções de uma geração sejam mantidas.
 
 ## Estrutura do Código
 
-1. **Função `fitness`**: Calcula o valor total dos itens selecionados na mochila, verificando se o peso total não excede a capacidade da mochila.
-2. **Função `mutacao`**: Aplica mutação aleatória nos cromossomos para garantir diversidade na população.
-3. **Função `crossover`**: Realiza a operação de crossover de um ponto entre dois cromossomos.
-4. **Função `selecao`**: Seleciona os pais para reprodução com base no valor de fitness, utilizando um método de **roleta**.
-5. **Algoritmo Genético**: Realiza a evolução da população através de um número definido de gerações, utilizando **elitismo**, **crossover** e **mutação**.
+1. **Função `fitness()`**:
+   Calcula o valor total dos itens selecionados na mochila, verificando se o peso total não excede a capacidade da mochila.
+
+2. **Função `mutacao()`**:
+   Aplica mutação aleatória nos cromossomos para garantir diversidade na população.
+
+3. **Função `crossover()`**:
+   Realiza a operação de crossover de um ponto entre dois cromossomos.
+
+4. **Função `selecao()`**:
+   Seleciona os pais para reprodução com base no valor de fitness, utilizando um método de roleta.
+
+5. **Função `algoritmo_genetico()`**:
+   Realiza a evolução da população através de um número definido de gerações, utilizando elitismo, crossover e mutação.
 
 ## Parâmetros do Problema
 
@@ -37,29 +47,31 @@ Este código implementa as operações de:
 
 ## Como Usar
 
-1. Clone o repositório:
+1. **Clone o repositório**:
 
-```bash
-git clone https://github.com/beatrizzoliveira/knapsack-problem.git
-```
+   ```bash
+   git clone https://github.com/beatrizzoliveira/knapsack-problem.git
+   ```
 
-2. Instale as dependências necessárias:
+2. **Instale as dependências necessárias**:
 
-```bash
-pip install -r requirements.txt
-```
+   Se você ainda não tiver o `matplotlib`, instale-o:
 
-3. Execute o script principal para rodar o algoritmo genético:
+   ```bash
+   pip install matplotlib
+   ```
 
-```bash
-python knapsack_problem.py
-```
+3. **Execute o script principal para rodar o algoritmo genético**:
 
-O código irá executar o algoritmo genético e ao final imprimirá a melhor solução encontrada, bem como um gráfico mostrando a evolução do **fitness** ao longo das gerações.
+   ```bash
+   python knapsack_problem.py
+   ```
+
+   O código irá executar o algoritmo genético e ao final imprimirá a melhor solução encontrada, bem como um gráfico mostrando a evolução do fitness ao longo das gerações.
 
 ## Exemplo de Saída
 
-```
+```bash
 Melhor solução encontrada: [1, 1, 1, 0, 0, 1, 0, 1, 1, 0] com valor total de 1800
 ```
 
@@ -67,7 +79,7 @@ Este resultado indica quais foram os itens selecionados para a mochila (onde 1 s
 
 ## Gráfico de Evolução do Fitness
 
-Após a execução, o código irá gerar um gráfico mostrando como o valor de **fitness** (valor total dos itens na mochila) evolui ao longo das gerações. Isso ajuda a visualizar a melhoria das soluções ao longo do tempo.
+Após a execução, o código irá gerar um gráfico mostrando como o valor de fitness (valor total dos itens na mochila) evolui ao longo das gerações. Isso ajuda a visualizar a melhoria das soluções ao longo do tempo.
 
 ## Arquivos
 
@@ -79,7 +91,7 @@ Após a execução, o código irá gerar um gráfico mostrando como o valor de *
 
 - **Python 3.x**
 - **matplotlib**: Biblioteca para gerar gráficos.
-  
+
 Instale as dependências com o seguinte comando:
 
 ```bash
@@ -89,7 +101,7 @@ pip install matplotlib
 ## Como Funciona
 
 1. **Inicialização**: A população inicial é criada de forma aleatória, onde cada indivíduo (cromossomo) é representado por uma sequência binária. Cada bit da sequência indica se um item está incluído na mochila (1) ou não (0).
-   
+
 2. **Cálculo de Fitness**: O valor de fitness de cada cromossomo é calculado, levando em consideração o valor dos itens e a capacidade da mochila.
 
 3. **Seleção**: Os indivíduos com maior fitness têm mais chances de ser selecionados para reprodução.
@@ -105,7 +117,3 @@ pip install matplotlib
 ## Contribuições
 
 Caso tenha sugestões ou melhorias, poderá abrir uma **issue** ou enviar um **pull request**.
-
-## Licença
-
-Este projeto está licenciado sob a Licença MIT - veja o arquivo [LICENSE](LICENSE) para mais detalhes.
